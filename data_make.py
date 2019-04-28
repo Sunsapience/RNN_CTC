@@ -42,7 +42,7 @@ def save_data(data,test_or_train='test'):
         pickle.dump(data,f)
 
 if __name__ == '__main__':
-    train_data = make_seq_data(20000,10,train=True)
+    train_data = make_seq_data(8000,10,train=True)
     valid_data = make_seq_data(1000,10,train=True)
     test_data = make_seq_data(1000,10,train=False)
     save_data(test_data,test_or_train='test')
