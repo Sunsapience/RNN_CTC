@@ -63,8 +63,6 @@ def run_epoch(sess,Model,data_queue, train_op,train_or):
         if i%10 == 0:
             loss, err, decode = sess.run([Model.loss, Model.err, Model.decoded], 
                     feed_dict=feed)
-            if i%190==0 and i>0:
-                print('\n',y[0],'---------',decode_sparse_tensor(decode[0])[0],'\n')
             # logging.info('*****After {} steps,   loss is {},    accurate is {}'.format(
             #     i,float('%.3f' % loss),float('%.3f' % err))) 
             print('epoch:\t{}\tloss:\t{}\t   error_rate:\t{}'.format(
@@ -76,7 +74,7 @@ def run_epoch(sess,Model,data_queue, train_op,train_or):
 
         if not train_or:
             decode = sess.run(Model.decoded,feed_dict=feed)
-            print(y[3],'---------',decode_sparse_tensor(decode[0])[3])
+            print(y[0],'---------',decode_sparse_tensor(decode[0])[0])
 
     return np.mean(b_err),np.mean(b_loss)
 
@@ -113,7 +111,7 @@ def main(_):
                 valid_loss,valid_err
             ))
             if valid_loss < base_line:
-                saver.save(sess,'./save/tf_ctc/model-',global_step=i+1)
+                saver.save(sess,'./save/model-',global_step=i+1)
                 base_line = valid_loss
       
 if __name__ == '__main__':
