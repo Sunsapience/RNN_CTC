@@ -43,7 +43,7 @@ def main(_):
         saver.restore(sess,'./save/model--6') 
         result = run_epoch(sess)
 
-        for i in [random.randint(0,len(result[1])) for _ in range(5)]:
+        for i in [random.randint(0,len(result[1])) for _ in range(2)]:
             plt.figure()
             plt.title("标签:  {}\n 预测:  {},".format(result[1][i],result[2][i]))
             plt.imshow(result[0][i])
