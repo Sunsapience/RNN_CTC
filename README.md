@@ -1,2 +1,4 @@
-# RNN_CTC
-1
+#CTC
+##including: 
+configs.py,
+
