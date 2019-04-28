@@ -17,5 +17,5 @@ configs.py(参数),data_make.py(产生数据),data_utils.py(处理数据),model.
 [1] [Connectionist Temporal Classification : Labelling Unsegmented Sequence Data with Recurrent Neural Networks.](https://dblp.uni-trier.de/db/conf/icml/icml2006.html)  
 [2] [博客1](https://xiaodu.io/ctc-explained/)  
 [3] [博客2](https://blog.csdn.net/JackyTintin/article/details/79425866)  
-[4] [](https://github.com/stardut/ctc-ocr-tensorflow)
+[4] [参考代码](https://github.com/stardut/ctc-ocr-tensorflow)
 
