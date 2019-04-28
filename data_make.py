@@ -50,18 +50,7 @@ if __name__ == '__main__':
     save_data(train_data,test_or_train='train')
 
         
-# images = mnist.test.images[:10].reshape((-1, 28, 28))
-# labels = mnist.test.labels[:10]
-# yy = [np.argmax(k) for k in labels[:10]]
-# print(yy)
-# # images, labels = mnist.train.next_batch(10)
-# # images = np.reshape(images,(-1,28,28))
 
-# z= np.zeros((28,280))
-# for i in range(10):
-#     z[:,i*28:(i+1)*28]=images[i]
-# # print([np.argmax(i) for i in labels])
-# plt.imshow(z)
-# pylab.show()
+
 
 
