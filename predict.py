@@ -40,7 +40,7 @@ def run_epoch(sess,Model=test_model,data_queue=test_data):
 def main(_):
     saver = tf.train.Saver()
     with tf.Session() as sess:
-        saver.restore(sess,'./save/tf_ctc/model--6') 
+        saver.restore(sess,'./save/model--6') 
         result = run_epoch(sess)
 
         for i in [random.randint(0,len(result[1])) for _ in range(5)]:
