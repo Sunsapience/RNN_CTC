@@ -44,7 +44,7 @@ class RNNCTC():
             cell_1 = rnn.BasicLSTMCell(cfg.hidden_size)
             cell_2 = rnn.BasicLSTMCell(cfg.hidden_size)
             outputs, _ = tf.nn.bidirectional_dynamic_rnn(cell_1, cell_2, 
-                    self.time_inputs, dtype=tf.float32,time_major=False)
+                    self.time_inputs, dtype=tf.float32,time_major=True)
             outputs = tf.concat(outputs, 2)
         return outputs
 ####################################
